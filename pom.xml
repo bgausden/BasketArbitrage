@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.orcsoftware.liquidator.sales-engineering.jean</groupId>
+	<artifactId>BasketArbitrage</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>BasketArbitrage</name>
+	<description>Simple strategy arbing a basket against a future.</description>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/template/</directory>
+				<includes>
+					<include>**/*.str</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.4.3</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<show>private
+				</show>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+<!--	<repositories>-->
+<!--		<repository>-->
+<!--			<id>buildsystem artifactory</id>-->
+<!--			<url>http://lion.orcsoftware.com:8888/artifactory/repo</url>-->
+<!--		</repository>-->
+<!--		<repository>-->
+<!--			<id>orc artifactory</id>-->
+<!--			<url>http://rhel-nmf-03.orcsoftware.com:8081/artifactory/repo</url>-->
+<!--		</repository>-->
+<!--		<repository>-->
+<!--			<id>central</id>-->
+<!--			<url>http://repo1.maven.org/maven2/</url>-->
+<!--		</repository>-->
+<!--	</repositories>-->
+
+	<organization>
+		<name>Orc Software</name>
+		<url>http://www.orcsoftware.com</url>
+	</organization>
+	<dependencyManagement>
+		<dependencies>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>com.orcsoftware</groupId>
+			<artifactId>liquidator</artifactId>
+			<version>130069.2</version>
+		</dependency>
+	</dependencies>
+</project>
